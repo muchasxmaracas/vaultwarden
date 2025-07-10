@@ -121,11 +121,10 @@ podSecurityContext:
 
 ## @param securityContext Default security options to run vault as read only container without privilege escalation
 securityContext:
-  {}
   # allowPrivilegeEscalation: false
   # privileged: false
   # readOnlyRootFilesystem: true
-  # runAsNonRoot: false
+  runAsNonRoot: false
   # runAsGroup: 1001
   # runAsUser: 1001
   # capabilities:
