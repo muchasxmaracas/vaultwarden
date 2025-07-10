@@ -341,7 +341,7 @@ pushNotifications:
   enabled: false
   ## @param pushNotifications.existingSecret Name of an existing secret containing the Bitwarden installation id and key
   ##
-  existingSecret: ""
+  existingSecret: "bitwarden-push-notification"
   installationId:
     ## @param pushNotifications.installationId.value Bitwarden installation id string
     ## Example: installationIdGoesHere
@@ -350,7 +350,7 @@ pushNotifications:
     ## @param pushNotifications.installationId.existingSecretKey When using an existing secret, specify the key which contains the installation id.
     ## Example: INSTALLATION_ID
     ##
-    existingSecretKey: ""
+    existingSecretKey: "INSTALLATION_ID"
   installationKey:
     ## @param pushNotifications.installationKey.value Bitwarden installation key string
     ## Example: superSecretInstallationKey
@@ -359,7 +359,7 @@ pushNotifications:
     ## @param pushNotifications.installationKey.existingSecretKey When using an existing secret, specify the key which contains the installation key.
     ## Example: INSTALLATION_KEY
     ##
-    existingSecretKey: ""
+    existingSecretKey: "INSTALLATION_KEY"
   ## @param pushNotifications.relayUri Change Bitwarden relay uri.
   ## Refer to https://github.com/dani-garcia/vaultwarden/wiki/Enabling-Mobile-Client-push-notification for details
   ##
