@@ -400,7 +400,7 @@ eventsDayRetain: ""
 ## @param domain Domain name where the application is accessed
 ## Example: https://warden.contoso.com:8443
 ##
-domain: "warden.baphomet.cloud"
+domain: "https://warden.baphomet.cloud"
 
 ## @param sendsAllowed Controls whether users are allowed to create Bitwarden Sends.
 ##
