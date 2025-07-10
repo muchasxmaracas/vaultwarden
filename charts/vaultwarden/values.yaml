@@ -271,7 +271,7 @@ storage:
   ##
   data:
     name: "vaultwarden-data"
-    size: "3Gi"
+    size: "10Gi"
     class: "hcloud-volumes"
     path: "/data"
     keepPvc: true
@@ -282,7 +282,7 @@ storage:
   ##
   attachments:
     name: "vaultwarden-files"
-    size: "3Gi"
+    size: "10Gi"
     class: "hcloud-volumes"
     path: /files
     keepPvc: true
