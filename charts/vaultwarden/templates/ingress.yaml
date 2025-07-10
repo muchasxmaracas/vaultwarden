@@ -18,6 +18,7 @@ metadata:
     {{- printf "%s: %s" $key (tpl $value $ | quote) | nindent 4 }}
     {{- end }}
   annotations:
+    cert-manager.io/issuer: "letsencrypt-prod"
     ingress.kubernetes.io/rewrite-target: /
     {{- if $ingress.tls }}
     ingress.kubernetes.io/ssl-redirect: "true"

@@ -121,11 +121,10 @@ podSecurityContext:
 
 ## @param securityContext Default security options to run vault as read only container without privilege escalation
 securityContext:
-  {}
-  # allowPrivilegeEscalation: false
-  # privileged: false
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
+  allowPrivilegeEscalation: false
+  privileged: false
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
   # runAsGroup: 1001
   # runAsUser: 1001
   # capabilities:
@@ -401,7 +400,7 @@ eventsDayRetain: ""
 ## @param domain Domain name where the application is accessed
 ## Example: https://warden.contoso.com:8443
 ##
-domain: ""
+domain: "warden.baphomet.cloud"
 
 ## @param sendsAllowed Controls whether users are allowed to create Bitwarden Sends.
 ##
@@ -439,7 +438,7 @@ trashAutoDeleteDays: ""
 ## of any of the restrictions above
 ##
 ## If signupDomains is set, then the value of signupsAllowed is ignored
-signupsAllowed: true
+signupsAllowed: false
 
 ## @param signupsVerify Whether to require account verification for newly-registered users.
 ##
@@ -567,7 +566,7 @@ adminRateLimitMaxBurst: "3"
 ## @param timeZone Specify timezone different from the default (UTC).
 ## For example: "Europe/Berlin"
 ##
-timeZone: ""
+timeZone: "Europe/Zurich"
 
 ## @section BETA Features
 ##
@@ -734,11 +733,11 @@ service:
 ingress:
   ## @param ingress.enabled Deploy an ingress resource.
   ##
-  enabled: false
+  enabled: true
   ## @param ingress.class Ingress resource class
   ## The Ingress class to use, e. g. "nginx" for a nginx ingress controller or "alb" for a AWS LB controller.
   #
-  class: "nginx"
+  class: "traefik"
   ## @param ingress.nginxIngressAnnotations Add nginx specific ingress annotations
   ## These annotations only make sense for the kubernetes nginx ingress controller (https://kubernetes.github.io/ingress-nginx/)
   ##
@@ -754,7 +753,7 @@ ingress:
   tls: true
   ## @param ingress.hostname Hostname for the ingress.
   ##
-  hostname: "warden.contoso.com"
+  hostname: "warden.baphomet.cloud"
   ## @param ingress.additionalHostnames Additional hostnames for the ingress.
   ##
   additionalHostnames: []
