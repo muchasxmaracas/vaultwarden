@@ -438,11 +438,11 @@ trashAutoDeleteDays: ""
 ## of any of the restrictions above
 ##
 ## If signupDomains is set, then the value of signupsAllowed is ignored
-signupsAllowed: false
+signupsAllowed: true
 
 ## @param signupsVerify Whether to require account verification for newly-registered users.
 ##
-signupsVerify: "true"
+signupsVerify: "false"
 
 ## @param signupDomains List of domain names for users allowed to register. For example:
 ## example.com,example.net,example.org.
