@@ -489,7 +489,7 @@ emailChangeAllowed: "true"
 ## SMTP service is not configured. Not recommended for publicly-accessible instances
 ## as this provides unauthenticated access to potentially sensitive data.
 ##
-showPassHint: "false"
+showPassHint: "true"
 
 ## @section Advanced settings
 ##
@@ -545,15 +545,15 @@ adminToken:
   ## @param adminToken.existingSecret Specify an existing Kubernetes secret containing the admin token. Also set adminToken.existingSecretKey.
   ## Example: admincreds_secret
   ##
-  existingSecret: ""
+  existingSecret: "vaultwarden-admin-token"
   ## @param adminToken.existingSecretKey When using adminToken.existingSecret, specify the key containing the token.
   ## Example: ADMIN_TOKEN
   ##
-  existingSecretKey: ""
+  existingSecretKey: "ADMIN_TOKEN"
   ## @param adminToken.value Plain or argon2 string containing the admin token.
   ## This example is the argon2 has of "R@ndomTokenString" (no quotes).
   ##
-  value: "$argon2id$v=19$m=19456,t=2,p=1$Vkx1VkE4RmhDMUhwNm9YVlhPQkVOZk1Yc1duSDdGRVYzd0Y5ZkgwaVg0Yz0$PK+h1ANCbzzmEKaiQfCjWw+hWFaMKvLhG2PjRanH5Kk"
+  value: ""
 
 ## @param adminRateLimitSeconds Number of seconds, on average, between admin login requests from the same IP address before rate limiting kicks in.
 ##
@@ -561,7 +561,7 @@ adminRateLimitSeconds: "300"
 
 ## @param adminRateLimitMaxBurst Allow a burst of requests of up to this size, while maintaining the average indicated by adminRateLimitSeconds.
 ##
-adminRateLimitMaxBurst: "3"
+adminRateLimitMaxBurst: "10"
 
 ## @param timeZone Specify timezone different from the default (UTC).
 ## For example: "Europe/Berlin"
