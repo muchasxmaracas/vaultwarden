@@ -262,33 +262,30 @@ storage:
   ## a value is set here
   ##
   existingVolumeClaim:
-    {}
-    # claimName: "vaultwarden-pvc"
-    # dataPath: "/data"
-    # attachmentsPath: /data/attachments
+    claimName: "vaultwarden-pvc"
+    dataPath: "/data"
+    attachmentsPath: /data/attachments
 
   ## @param storage.data Data directory configuration, refer to values.yaml for parameters.
   ##
   data:
-    {}
-    # name: "vaultwarden-data"
-    # size: "15Gi"
-    # class: ""
-    # path: "/data"
-    # keepPvc: false
-    # accessMode: "ReadWriteOnce"
+    name: "vaultwarden-data"
+    size: "3Gi"
+    class: "hcloud-volumes"
+    path: "/data"
+    keepPvc: true
+    accessMode: "ReadWriteOnce"
 
   ## @param storage.attachments Attachments directory configuration, refer to values.yaml for parameters.
   ## By default, attachments/ is located inside the data directory.
   ##
   attachments:
-    {}
-    # name: "vaultwarden-files"
-    # size: "100Gi"
-    # class: ""
-    # path: /files
-    # keepPvc: false
-    # accessMode: "ReadWriteOnce"
+    name: "vaultwarden-files"
+    size: "3Gi"
+    class: "hcloud-volumes"
+    path: /files
+    keepPvc: true
+    accessMode: "ReadWriteOnce"
 
 ## @param webVaultEnabled Enable Web Vault
 ##
@@ -438,7 +435,7 @@ trashAutoDeleteDays: ""
 ## of any of the restrictions above
 ##
 ## If signupDomains is set, then the value of signupsAllowed is ignored
-signupsAllowed: true
+signupsAllowed: false
 
 ## @param signupsVerify Whether to require account verification for newly-registered users.
 ##
@@ -469,7 +466,7 @@ invitationsAllowed: true
 
 ## @param invitationOrgName String Name shown in the invitation emails that don't come from a specific organization
 ##
-invitationOrgName: "Vaultwarden"
+invitationOrgName: "Vaultwarden Baphomet"
 
 ## @param invitationExpirationHours The number of hours after which an organization invite token, emergency access invite token,
 ## email verification token and deletion request token will expire (must be at least 1)
@@ -500,7 +497,7 @@ ipHeader: "X-Real-IP"
 
 ## @param iconService The predefined icon services are: internal, bitwarden, duckduckgo, google.
 ##
-iconService: "internal"
+iconService: "google"
 
 ## @param iconRedirectCode Icon redirect code
 ##
