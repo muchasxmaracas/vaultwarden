@@ -642,10 +642,10 @@ smtp:
   ##  - force_tls: implicit TLS using port 465
   ##  - off: no encryption, using port 25, unless using STARTTLS
   ##
-  security: "force_tls"
+  security: "off"
   ## @param smtp.port SMTP port
   ##
-  port: 465
+  port: 25
   ## @param smtp.from SMTP sender email address
   ## Example: juan.delacruz@gmail.com
   ##
