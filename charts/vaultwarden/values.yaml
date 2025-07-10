@@ -338,7 +338,7 @@ database:
 pushNotifications:
   ## @param pushNotifications.enabled Enable the push notification service
   ##
-  enabled: false
+  enabled: true
   ## @param pushNotifications.existingSecret Name of an existing secret containing the Bitwarden installation id and key
   ##
   existingSecret: "bitwarden-push-notification"
