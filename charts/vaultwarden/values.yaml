@@ -688,7 +688,7 @@ smtp:
   acceptInvalidCerts: "false"
   ## @param smtp.debug SMTP debugging
   ##
-  debug: true
+  debug: false
 
 ## @section Exposure settings
 ##
