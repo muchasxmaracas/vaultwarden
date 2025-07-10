@@ -124,7 +124,7 @@ securityContext:
   allowPrivilegeEscalation: false
   privileged: false
   readOnlyRootFilesystem: true
-  runAsNonRoot: true
+  runAsNonRoot: false
   # runAsGroup: 1001
   # runAsUser: 1001
   # capabilities:
@@ -766,7 +766,7 @@ ingress:
   pathType: "Prefix"
   ## @param ingress.tlsSecret Kubernetes secret containing the SSL certificate when using the "nginx" class.
   ##
-  tlsSecret: ""
+  tlsSecret: "warden-baphomet-cloud-cert"
   ## @param ingress.nginxAllowList Comma-separated list of IP addresses and subnets to allow.
   ##
   nginxAllowList: ""
