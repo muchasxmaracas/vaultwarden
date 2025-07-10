@@ -642,7 +642,7 @@ smtp:
   ##  - force_tls: implicit TLS using port 465
   ##  - off: no encryption, using port 25, unless using STARTTLS
   ##
-  security: "starttls"
+  security: "force_tls"
   ## @param smtp.port SMTP port
   ##
   port: 465
@@ -679,7 +679,7 @@ smtp:
   ## Possible values: "Plain", "Login", "Xoauth2"
   ## Multiple options need to be separated by a comma. (not tested)
   ##
-  authMechanism: "Plain"
+  authMechanism: "Login"
   ## @param smtp.acceptInvalidHostnames Accept Invalid Hostnames
   ##
   acceptInvalidHostnames: "false"
@@ -688,7 +688,7 @@ smtp:
   acceptInvalidCerts: "false"
   ## @param smtp.debug SMTP debugging
   ##
-  debug: false
+  debug: true
 
 ## @section Exposure settings
 ##
